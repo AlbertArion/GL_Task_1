@@ -58,29 +58,28 @@ const Form: React.FC = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="p-8 bg-white shadow-md rounded-md">
+        <form onSubmit={handleSubmit} className="p-8 bg-white shadow-md rounded-md" style={{background: ' linear-gradient(180deg, #BEB590 0%, #9E946A 100%)', borderRadius: '30px'}}>
+            <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', color: '#3B2608'}}>Get free sample report &<br></br> white paper</div>
             <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-                    E-mail Address
-                </label>
                 <input
                     type="email"
                     id="email"
                     value={email}
+                    placeholder='E-mail Address'
                     onChange={handleEmailChange}
+                    style={{borderRadius: '20px', paddingLeft: '20px'}}
                     className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
                 />
                 {emailError && <span className="text-red-500 text-sm">{emailError}</span>}
             </div>
             <div className="mb-4">
-                <label htmlFor="phone" className="block text-gray-700 font-bold mb-2">
-                    Phone Number (Optional)
-                </label>
                 <input
                     type="tel"
                     id="phone"
                     value={phone}
+                    placeholder='Phone Number (Optional)'
                     onChange={handlePhoneChange}
+                    style={{borderRadius: '20px', paddingLeft: '20px'}}
                     className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500"
                 />
                 {phoneError && <span className="text-red-500 text-sm">{phoneError}</span>}
@@ -88,9 +87,11 @@ const Form: React.FC = () => {
             <button
                 type="submit"
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
+                style={{borderRadius: '20px', width: '100%', background: 'linear-gradient(90deg, #664922 0%, #503715 100%)', marginTop: '10px'}}
             >
                 Send me PDF
             </button>
+            <div style={{fontSize: "12px", marginTop: "10px", marginLeft: "6px", marginRight: "6px"}}>You consent to receive communications from Generation Lab. You can<br></br>unsubscribe anytime.</div>
             {message && <p className={`mt-4 ${message.includes('success')? 'text-green-500' : 'text-red-500'} text-sm`}>{message}</p>}
         </form>
     );
