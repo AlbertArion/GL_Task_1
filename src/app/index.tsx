@@ -2,8 +2,8 @@
  * @Author: Albert
  * @Date: 2025-02-20 12:35:42
  * @LastEditors: Albert
- * @LastEditTime: 2025-02-20 12:41:08
- * @FilePath:/workspace/GL_Task_1/src/app/page.tsx
+ * @LastEditTime: 2025-02-20 12:35:49
+ * @FilePath:/workspace/GL_Task_1/src/pages/index.tsx
  * @Description: 
  * 
  */
